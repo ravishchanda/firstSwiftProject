@@ -31,7 +31,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnE-Mq-6Er">
                                 <rect key="frame" x="57.5" y="258.5" width="260" height="150"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User Name" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nlg-1j-a47">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nlg-1j-a47">
                                         <rect key="frame" x="30" y="21" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="FRk-IW-VQd"/>
@@ -41,15 +41,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4jw-Xi-CSS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4jw-Xi-CSS">
                                         <rect key="frame" x="30" y="69" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="N1x-bk-Oj3"/>
                                             <constraint firstAttribute="height" constant="30" id="ouE-fO-qnt"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-ua-AHB">
                                         <rect key="frame" x="30" y="107" width="100" height="30"/>
@@ -60,6 +60,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8a-xy-bDS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-ua-DHl">
                                         <rect key="frame" x="130" y="107" width="100" height="30"/>
@@ -71,6 +74,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2z-s9-J78"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,6 +107,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnCancel" destination="gUw-ua-DHl" id="Fch-8t-WJL"/>
+                        <outlet property="btnLogin" destination="KoS-ua-AHB" id="6SJ-Su-d4W"/>
                         <outlet property="lblWwelcome" destination="plT-Gf-qcC" id="TuT-Wh-0Z4"/>
                         <outlet property="txtPassWord" destination="4jw-Xi-CSS" id="Xvs-EE-kGC"/>
                         <outlet property="txtUserName" destination="Nlg-1j-a47" id="mMj-hk-Fzg"/>

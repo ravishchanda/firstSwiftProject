@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     var testLabel = "";
+    @IBOutlet weak var btnCancel: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var lblWwelcome: UILabel!
     @IBOutlet weak var viewCtrlHolder: UIView!
     @IBOutlet weak var txtUserName: UITextField!
@@ -19,6 +21,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
+    
+    @IBAction func loginClicked(_ sender: Any, forEvent event: UIEvent) {
+        print("loginClicked")
+    }
+    
+    @IBAction func cancelClicked(_ sender: Any, forEvent event: UIEvent) {
+        print ("cancelClicked")
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
