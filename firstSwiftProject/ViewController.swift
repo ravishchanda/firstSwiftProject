@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     var testLabel = "";
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnLogin: UIButton!
@@ -16,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewCtrlHolder: UIView!
     @IBOutlet weak var txtUserName: UITextField!
     @IBOutlet weak var txtPassWord: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
